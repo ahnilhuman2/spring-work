@@ -3,17 +3,21 @@ package com.example.springwork.service;
 import com.example.springwork.domain.Member;
 import com.example.springwork.repository.MemberRepsoitory;
 import com.example.springwork.repository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class MemberService {
 
+    private final MemberRepsoitory memberRepsoitory;
+
+    @Autowired
     public MemberService(MemberRepsoitory memberRepsoitory) {
         this.memberRepsoitory = memberRepsoitory;
     }
-
-    private final MemberRepsoitory memberRepsoitory;
 
     //회원가입
     public Long join(Member member) {
