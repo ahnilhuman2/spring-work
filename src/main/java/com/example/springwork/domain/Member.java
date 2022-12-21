@@ -1,8 +1,17 @@
 package com.example.springwork.domain;
 
+import org.springframework.context.annotation.Configuration;
+
+import javax.persistence.*;
+
+@Entity
 public class Member {
 
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+//    @Column(name = "username")
+    @Column
     private String name;
 
     public Long getId() {
