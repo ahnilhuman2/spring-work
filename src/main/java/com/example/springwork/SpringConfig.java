@@ -12,7 +12,7 @@ import javax.sql.DataSource;
 
 @Configuration
 public class SpringConfig {
-    
+
     private final DataSource dataSource;
 
     public SpringConfig(DataSource dataSource) {
